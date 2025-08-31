@@ -33,8 +33,8 @@ const Section = ({ id, children, className = "" }: { id?: string; children: Reac
   </section>
 );
 
-const Pill = ({ children }: { children: React.ReactNode }) => (
-  <span className="inline-flex items-center px-3 py-1 rounded-full border text-sm font-medium bg-white/50 backdrop-blur-sm">{children}</span>
+const Pill = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
+  <span className={`inline-flex items-center px-3 py-1 rounded-full border text-sm font-medium bg-white/50 backdrop-blur-sm ${className}`}>{children}</span>
 );
 
 const Feature = ({ icon: Icon, title, children }: { icon: React.ComponentType<{ className?: string }>; title: string; children: React.ReactNode }) => (
