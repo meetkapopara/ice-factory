@@ -344,7 +344,7 @@ export default function IceFactoryWholesale() {
           <div>
             <h2 className="text-3xl font-bold text-slate-900 mb-6">Request Trade Access</h2>
             <p className="text-lg text-slate-600 leading-relaxed mb-8">
-              Tell us about your business and what you're looking for. We'll review your application and send you our private catalog once approved.
+              Tell us about your business and what you&apos;re looking for. We&apos;ll review your application and send you our private catalog once approved.
             </p>
             <form onSubmit={handleInquiry} className="space-y-6">
               <div className="grid sm:grid-cols-2 gap-4">
