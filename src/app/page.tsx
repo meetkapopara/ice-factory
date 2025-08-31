@@ -27,17 +27,17 @@ import {
 } from "lucide-react";
 
 // --- Utility Components ---
-const Section = ({ id, children, className = "" }) => (
+const Section = ({ id, children, className = "" }: { id?: string; children: React.ReactNode; className?: string }) => (
   <section id={id} className={`max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
     {children}
   </section>
 );
 
-const Pill = ({ children }) => (
+const Pill = ({ children }: { children: React.ReactNode }) => (
   <span className="inline-flex items-center px-3 py-1 rounded-full border text-sm font-medium bg-white/50 backdrop-blur-sm">{children}</span>
 );
 
-const Feature = ({ icon: Icon, title, children }) => (
+const Feature = ({ icon: Icon, title, children }: { icon: React.ComponentType<{ className?: string }>; title: string; children: React.ReactNode }) => (
   <div className="flex gap-4">
     <div className="shrink-0 rounded-2xl p-3 border shadow-sm bg-white">
       <Icon className="w-6 h-6 text-slate-700" />
@@ -49,7 +49,7 @@ const Feature = ({ icon: Icon, title, children }) => (
   </div>
 );
 
-const Stat = ({ value, label }) => (
+const Stat = ({ value, label }: { value: string; label: string }) => (
   <div className="text-center">
     <div className="text-3xl font-bold text-slate-900">{value}</div>
     <div className="text-sm text-slate-600">{label}</div>
@@ -60,7 +60,7 @@ const Stat = ({ value, label }) => (
 export default function IceFactoryWholesale() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const handleInquiry = (e) => {
+  const handleInquiry = (e: React.FormEvent) => {
     e.preventDefault();
     alert("Thanks! We'll review your application and send you our private catalog. For immediate access, contact us on WhatsApp.");
   };
